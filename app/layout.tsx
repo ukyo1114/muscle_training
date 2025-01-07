@@ -18,16 +18,6 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6870293550717146"
           crossOrigin="anonymous"
         ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: "ca-pub-XXXXXXXXXXXXXX",
-                enable_page_level_ads: true
-              });
-            `,
-          }}
-        />
       </head>
       <body>
         <header>
