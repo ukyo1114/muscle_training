@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ['yt3.ggpht.com', 'baseec-img-mng.akamaized.net'],
+  },
 };
 
 export default nextConfig;
