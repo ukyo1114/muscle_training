@@ -4,7 +4,7 @@ import styles from '../page.module.css';
 
 async function fetchYouTubeData(channelId: string) {
   const response = await fetch(
-    `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${process.env.NEXT_PUBLIC_API_KEY}`
+    `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${process.env.API_KEY}`
   );
   const data = await response.json();
   return data.items[0];
