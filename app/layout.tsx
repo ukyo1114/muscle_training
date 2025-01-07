@@ -1,6 +1,5 @@
 import './globals.css';
 import Link from 'next/link';
-// import styles from './layout.module.css';
 
 export default function RootLayout({
   children,

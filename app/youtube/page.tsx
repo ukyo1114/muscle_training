@@ -3,10 +3,12 @@ import Link from 'next/link';
 import styles from '../page.module.css';
 
 async function fetchYouTubeData(channelId: string) {
-  const response = await fetch(
-    `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${process.env.API_KEY}`
-  );
-  const data = await response.json();
+  const data = await fetch(
+    `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${process.env.API_KEY}`,
+    {
+      next: { revalidate: 24 * 60 * 60 },
+    }
+  ).then((res) => res.json());
   return data.items[0];
 }
 

@@ -4,9 +4,10 @@ import { load } from 'cheerio';
 import styles from '../page.module.css';
 
 async function fetchLinkPreview(url: string) {
-  const response = await fetch(url);
-  const html = await response.text();
-  const $ = load(html);
+  const data = await fetch(url, {
+    next: { revalidate: 24 * 60 * 60 },
+  }).then((res) => res.text());
+  const $ = load(data);
   return {
     url,
     title: $('meta[property="og:title"]').attr('content'),
