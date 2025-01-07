@@ -2,7 +2,7 @@ import './globals.css';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'My AdSense Enabled Site',
+  title: '筋トレ情報ポータル -Lift-',
 };
 
 export default function RootLayout({
